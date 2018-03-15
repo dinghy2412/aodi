@@ -27,7 +27,7 @@ $signPackage = $jssdk->GetSignPackage();
 			<div class="videoArea">
 				<img src="images/preImg.jpg" class="indexBgImg"/>
 				<div class="vedioImgBtn" id="playBtn">
-<video style="object-fit: fill;" width="100%" height="100%" preload="auto" poster="images/preImg.png" x5-video-player-type="h5" x5-video-player-fullscreen="true" playsinline="true" webkit-playsinline="true" x-webkit-airplay="allow">
+<video style="object-fit: fill;" id="indexVideo" width="100%" height="100%" preload="auto" poster="images/preImg.png" x5-video-player-type="h5" x5-video-player-fullscreen="true" playsinline="true" webkit-playsinline="true" x-webkit-airplay="allow">
 						<source src="http://img.xiyoumai.com/audiyanshi2.mp4" type="video/mp4">
 					</video>
 				</div>
@@ -88,6 +88,7 @@ wx.config({
 	]
 });
 wx.ready(function () {
+	document.getElementById("indexVideo").play()
 	wx.checkJsApi({
 		jsApiList: ['onMenuShareTimeline',
 			'onMenuShareAppMessage',
