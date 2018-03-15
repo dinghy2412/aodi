@@ -28,9 +28,7 @@ $signPackage = $jssdk->GetSignPackage();
 	</head>
 	<body onorientationchange="updateOrientation();">
 		<div class="main">
-			<video id="video_1" controls="controls" width="100%" height="100%" preload="auto" poster="images/preImg.jpg" x5-video-player-type="h5" x5-video-player-fullscreen="true" playsinline="true" objectFit="cover" webkit-playsinline="true" x-webkit-airplay="allow">
-				<source src="http://img.xiyoumai.com/audiyanshi2.mp4" type="video/mp4">
-			</video>
+			<video id="video_1" class="hp" width="100%" height="100%" preload="auto" x5-video-player-type="h5" x5-video-player-fullscreen="true" x5-video-orientation="portraint" webkit-playsinline="true" x-webkit-airplay="allow"><source src="http://audi.cigtest.com.cn/images/video.webm" type="video/webm"><source src="http://audi.cigtest.com.cn/images/video_b.mp4" type="video/mp4"></video>
 		</div>
 	</body>
 	<script>
