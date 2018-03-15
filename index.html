@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="full-screen" content="yes">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="HandheldFriendly" content="true">
+		<meta http-equiv='X-UA-Compatible' content='IE=EDGE'>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/page.css"/>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" ></script>
+		<title>GOOOO AHEAD</title>
+	</head>
+	<body>
+		<div class="loading">
+			<img class="loadingImg anim1 anim2" src="images/logo.png"/>
+			<div id="progressNum"></div>
+		</div>
+		<div class="main">
+			<div class="videoArea">
+				<div class="vedioImgBtn" id="playBtn">
+					<video style="object-fit: fill;" width="100%" height="100%" preload="auto" poster="images/preImg.png" x5-video-player-type="h5" x5-video-player-fullscreen="true" playsinline="true" webkit-playsinline="true" x-webkit-airplay="allow">
+						<source src="http://img.xiyoumai.com/audiyanshi2.mp4" type="video/mp4">
+					</video>
+				</div>
+			</div>
+			<div class="titleArea"><span>不信抬头看 奥迪负过谁</span></div>
+			<div class="imgArea"></div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/wxshare.js" ></script>
+	<script>
+		$(function(){
+			doProgressBarLoading();
+		    /*setTimeout(function () {  
+		        $(".loading").fadeOut();  
+		    }, 2500); */ 
+		})
+		$(".main").click(function(){
+			window.location.href="p2.html";
+		});
+		
+		var progressId = "ProgressBarID";
+		function setProgressBar(progress) {
+			if(progress) {
+				$("#progressNum").html(String(progress) + "%");
+			}
+		}
+		var i_ProgressBar = 0;
+		
+		function doProgressBarLoading() {
+			if(i_ProgressBar > 100) {
+				setTimeout(function(){
+					$(".loading").fadeOut();
+				},1500);
+				
+				return;
+			}
+			if(i_ProgressBar <= 100) {
+				setTimeout("doProgressBarLoading()", 20);
+				setProgressBar(i_ProgressBar);
+				i_ProgressBar++;
+			}
+		}
+	</script>
+</html>

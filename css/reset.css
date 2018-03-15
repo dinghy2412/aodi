@@ -1,0 +1,152 @@
+body,
+form,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+header,
+menu,
+footer,
+section,
+video,
+article,
+button,
+input,
+select {
+	margin: 0;
+	padding: 0;
+}
+
+div,
+ul,
+dl,
+dt,
+dd,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+menu,
+footer,
+section,
+video,
+article,
+hgroup,
+button,
+label {
+	zoom: 1;
+}
+
+body {
+	text-align: center;
+	vertical-align: middle;
+}
+
+html,
+body,
+td,
+th,
+.wrapper {
+	color: #E4C875;
+	font-size: 16px;
+	line-height: 1.75em;
+}
+
+input,
+select {
+	vertical-align: middle;
+	line-height: normal;
+	font-size: 1em;
+	color: #000000;
+}
+
+textarea {
+	font-size: 1em;
+	line-height: 1.75em;
+}
+
+a {
+	outline: 0;
+	cursor: pointer;
+	*star: expression(this.onFocus=this.blur());
+	-webkit-transition: border-color .5s ease-out, background-color .5s ease-out, background-size .5s ease-out, color .5s ease-out;
+	-moz-transition: border-color .5s ease-out, background-color .5s ease-out, background-size .5s ease-out, color .5s ease-out;
+	-ms-transition: border-color .5s ease-out, background-color .5s ease-out, background-size .5s ease-out, color .5s ease-out;
+	transition: border-color .5s ease-out, background-color .5s ease-out, background-size .5s ease-out, color .5s ease-out;
+}
+
+button {
+	cursor: pointer;
+}
+
+a:link,
+a:visited,
+a:active {
+	color: #DEA189;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+img {
+	border: 0;
+	vertical-align: top;
+}
+
+
+/*a:hover img{opacity:0.8;filter:alpha(opacity=80);}*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
+.hidden {
+	display: none;
+}
+
+.clear {
+	clear: both;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+}
+
+span.center {
+	display: inline-block;
+	margin: 0 -0.5em 0 -1px;
+	vertical-align: middle;
+	width: 1px;
+	height: 100%;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+.jc {
+	position: absolute;
+	height: 0;
+	top: 0;
+	overflow: hidden;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="full-screen" content="yes">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="HandheldFriendly" content="true">
+		<meta http-equiv='X-UA-Compatible' content='IE=EDGE'>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/page.css"/>
+		<link rel="stylesheet" href="css/pageSlider.css">
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<!--引入zepto.js-->
+		<script src="http://cdn.bootcss.com/zepto/1.1.4/zepto.js"></script>
+		<!--引入pageSlider.js文件-->
+		<script src="js/pageSlider.js"></script>
+		<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" ></script>
+		<title>GOOOO AHEAD</title>
+	</head>
+	<body>
+		<div class="section sec1"></div>
+		<div class="section sec2"></div>
+		<div class="section sec3"></div>
+		<div class="section sec4"></div>
+		<div class="section sec5"></div>
+		<div class="section sec6"></div>
+		<div class="section sec7"></div>
+		<div class="section sec8"></div>
+		<div class="section sec9"></div>
+		<div class="remindDown">
+			<img src="images/next.gif"  class="nextImg"/>
+		</div>
+	</body>
+	<script>
+			//$(function(){
+				var pageSlider = PageSlider.case();
+			//});
+			
+			//a标签无法触发跳转的问题用以下代码
+			$(".to-form-link>a").on('touchend', function() {
+				location.replace($(this).attr("href"));
+			});
+		</script>
+		<script type="text/javascript" src="js/wxshare.js" ></script>
+</html>

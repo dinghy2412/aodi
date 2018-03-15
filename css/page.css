@@ -1,0 +1,556 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: DFPHeiW9-GB Regular DFPHeiW5-GB Regular;
+}
+/*p1*/
+.main{
+	width: 100%;
+	height: 100%;
+	display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.loading{
+	width: 100%;
+	height: 100%;
+	background: #770908;
+}
+.loadingImg{
+    position: absolute;
+    bottom: 50%;
+    margin-left: -20%;
+    width: 40%;
+}
+.anim1{
+	animation: fadeIn 3s ease;
+	-webkit-animation: fadeIn 3s ease;
+}
+.anim2{
+	animation: beat 3s ease;
+	-webkit-animation: beat 3s ease;
+}
+@keyframes fadeIn {
+	0% {opacity: 0; }
+	25% {opacity: .25; }
+	50% {opacity: .5; }
+	75% {opacity: .75; }
+	100% {opacity: 1;}
+}
+@-webkit-keyframes fadeIn {
+	0% {opacity: 0; }
+	25% {opacity: .25; }
+	50% {opacity: .5; }
+	75% {opacity: .75; }
+	100% {opacity: 1;}
+}
+
+@keyframes beat {
+	0% {-webkit-transform: scale(0.9,0.9)}
+	100% {-webkit-transform: scale(1,1)}
+}
+@-webkit-keyframes beat {
+	0% {-webkit-transform: scale(0.9,0.9)}
+	100% {-webkit-transform: scale(1,1)}
+}
+
+#progressNum{
+	position: absolute;
+    width: 100%;
+    color: #fff;
+    top: 55%;
+}
+
+.videoArea{
+	width: 100%;
+	height: 30.43%;
+    position: relative;
+}
+.indexBgImg{
+	width: 100%;
+	height: 100%;
+}
+.vedioImgBtn{
+	width: 100%;
+	height: 100%;
+	background: url(../images/video_btn.png) no-repeat;
+	background-size: 100%;
+	z-index: 99;
+	position: absolute;
+	top: 0;
+}
+.titleArea{
+    width: 100%;
+    height: 4.43%;
+    background: #000;
+    color: #fff;
+    display: table;
+    font-weight: 600;
+    line-height: 2.2rem;
+    font-family: DFPHeiW9-GB Regular;
+}
+
+.titleArea>span{
+    display: table-cell;
+    font-size: .8rem;
+    word-spacing: 1rem;
+    letter-spacing: .2rem;
+    font-weight: 600;
+}
+.imgArea{
+	width: 100%;
+	flex: 1;
+	background: url(../images/btm_img.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+
+/*p2*/
+.rotate90{
+	transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	filter:progid:DXImageTransform.Microsoft.BasicImage(Rotation=1);
+}
+#video_1{
+	position: absolute;	
+}   
+/*p3*/
+.section{
+	background-size: 100% 100%;
+}
+.remindDown{
+    position: absolute;
+    bottom: 0;
+    height: 85px;
+    width: 100%;
+}
+
+.nextImg{
+	position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    margin-left: -25px;
+    bottom: 10px;
+
+}
+.sec1{
+	background-image: url(../images/haibao1.jpg);
+	background-repeat: no-repeat;
+}
+.sec2{
+	background-image: url(../images/haibao2.jpg);
+	background-repeat: no-repeat;
+}
+.sec3{
+	background-image: url(../images/haibao3.jpg);
+	background-repeat: no-repeat;
+}
+.sec4{
+	background-image: url(../images/haibao4.jpg);
+	background-repeat: no-repeat;
+}
+.sec5{
+	background-image: url(../images/haibao5.jpg);
+	background-repeat: no-repeat;
+}
+.sec6{
+	background-image: url(../images/haibao6.jpg);
+	background-repeat: no-repeat;
+}
+.sec7{
+	background-image: url(../images/haibao7.jpg);
+	background-repeat: no-repeat;
+}
+.sec8{
+	background-image: url(../images/haibao8.jpg);
+	background-repeat: no-repeat;
+}
+.sec9{
+	background-image: url(../images/haibao9.jpg);
+	background-repeat: no-repeat;
+}
+
+
+/*p4*/
+.leaveInfoBg{
+	width: 100%;
+	height: 100%;
+	background:url(../images/login.jpg) no-repeat;
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+.mainInfo{
+	width: 84.6%;
+    height: 80%;
+    margin: 10% auto;
+}
+.line{
+	width: 94%;
+	height: 2px;
+	margin: 0;
+}
+/* .slideThree */
+.slideThree {
+	width: 80px;
+    height: 26px;
+    background: #333;
+    margin: 20px 10px;
+    position: relative;
+    display: inline-block;
+  position: relative;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+}
+.slideThree:after {
+  content: 'OFF';
+  color: #000;
+  position: absolute;
+  right: 10px;
+  z-index: 0;
+  font: 12px/26px Arial, sans-serif;
+  font-weight: bold;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.15);
+}
+.slideThree:before {
+  content: 'ON';
+  color: #00bf00;
+  position: absolute;
+  left: 10px;
+  z-index: 0;
+  font: 12px/26px Arial, sans-serif;
+  font-weight: bold;
+}
+.slideThree label {
+  display: block;
+  width: 34px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  z-index: 1;
+  background: #fcfff4;
+  background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.slideThree input[type=checkbox] {
+  visibility: hidden;
+}
+.slideThree input[type=checkbox]:checked + label {
+  left: 43px;
+}
+
+/*p4*/
+.leaveInfoBg{
+	width: 100%;
+	height: 100%;
+	background:url(../images/bgImg.jpg) no-repeat;
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+.headImg{
+    width: 100%;
+    height: 10%;
+    margin: 15% 0 5% 13%;
+    background: url(../images/leaveInfoHead.png) no-repeat;
+    background-size: 72%;
+}
+.mainInfo{
+	width: 80.6%;
+    height: 80%;
+    margin: 10% auto;
+    text-align: left;
+    background: transparent;
+}
+
+.labelText{
+	color: #FFFFFF;
+	opacity: .7;
+	height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    font-size: 15px;
+}
+
+.radio{
+	background: url(../images/rd_no.png) no-repeat;
+    display: inline-block;
+	width: 20px;
+    height: 20px;
+    background-size: cover;
+    vertical-align: middle;
+}
+
+.yes{
+	background: url(../images/rd_yes.png) no-repeat;
+	background-size: cover;
+}
+
+.carOwnerText{
+	    color: #fff;
+    margin: 2px 10px 0 5px;
+    vertical-align: -2px;
+}
+
+.noOwner{
+	margin-left: 20px;
+}
+.mainInfo>p>input{
+	width: 60%;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 5px;
+    background: no-repeat;
+    border: none;
+    color: #fff;
+    outline: none;
+}
+
+.cityInfo{
+	width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background: no-repeat;
+    border: none;
+    color: #fff;
+    outline: none;
+    margin-top: 20px;
+    font-size: 15px;
+}
+#citySpan{
+	opacity: .7;
+}
+.changeCity{
+	width: 30%;
+    text-align: center;
+    border: none;
+    border-radius: 50px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    margin-top: 5px;
+    color: #6a0505;
+    background: #fff;
+    margin-bottom: 5px;
+
+}
+.btnDiv{
+	text-align: center;
+}
+.btnDiv>button{
+    width: 100%;
+    height: 40px;
+    border-radius: 50px;
+    color: #932b2b;
+    font-size: 16px;
+    margin-top: 20px;
+    letter-spacing: .1rem;
+    text-align: center;
+    background: #fff;
+    outline: none;
+    border: none;
+}
+.remindBgFail,.remindBgSuccess{
+	width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 99;
+    background-color:transparent;
+    display: none;
+    position: absolute;
+}
+
+.remindBgSuccess{
+	background-color: rgba(16,15,24,0.8);
+	position: fixed;
+}
+.remindBgFail .remindDiv{
+	position: absolute;
+    width: 70%;
+    height: 28%;
+    z-index: 99;
+    top: 50%;
+    left: 50%;
+    margin: -14% 0 0 -35%;
+    background-color: rgba(16,15,24,0.8);
+    border-radius: 5px;
+}
+
+.shareI{
+	width: 90%;
+}
+.remindBgSuccess .remindDiv{
+    width: 70%;
+    height: 28%;
+    margin: 0 auto;
+    position: absolute;
+    margin-left: -22%;
+    margin-top: -60%;
+    top: 40%;
+    left: 50%;
+    border-radius: 10px;
+}
+.errorText,.Ikonw{
+	width: 100%;
+	height: 50%;
+	display: table;
+}
+
+.errorText>span,#IkonwSpan,#ClosewSpan{
+    display: table-cell;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 16px;
+}
+#IkonwSpan,#ClosewSpan{
+	background: #fff;
+	border-radius: 0 0 10px 10px ;
+}
+#cityVal{
+	color: #fff;
+	margin-left: 10px;
+}
+.shareBtn{
+	position: absolute;
+    top: 52%;
+    width: 100%;
+}
+
+.shareBtn>button{
+    width: 32%;
+    height: 40px;
+    border: 1px solid #ffcb00;
+    border-radius: 50px;
+    font-size: 18px;
+    color: #ffcb00;
+    background: transparent;
+}
+.cityContainer{
+	position: absolute;
+    top: 0;
+    width: 90%;
+    height: 100%;
+    right: 0;
+    z-index: 99;
+    display: none;
+    text-align: left;
+    overflow: auto;
+    background-color:rgba(0,0,0,0.9);
+}
+
+.sort_box{
+	width: 65%;
+    padding: 37px 0 0 30px;
+    position: absolute;
+}
+
+.sort_letter{
+	height: 38px;
+    line-height: 38px;
+    font-family: Helvetica;
+    font-size: 1.2rem;
+    color: #ffd100;
+}
+.sort_letter:after,.num_name:after{
+	display: block;
+    border-top: 1px solid #e5e5e5;
+    left: 0;
+    width: 100%;
+    content: ' ';
+    opacity: .4;
+}
+
+.num_name{
+	height: 34px;
+    line-height: 34px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.initials{
+	position: fixed;
+    z-index: 30;
+    width: 40px;
+    right: 5px;
+    top: 20px;
+}
+@keyframes cityOut
+{
+    0%   {left:20%; top:0;}
+    25%  {left:40%; top:0;}
+    50%  {left:60%; top:0;}
+    75%  {left:80%; top:0;}
+    100% {left:100%; top:0;}
+}
+ 
+@-webkit-keyframes cityOut /* Safari 与 Chrome */
+{
+    0%   {left:20%; top:0;}
+    25%  {left:40%; top:0;}
+    50%  {left:60%; top:0;}
+    75%  {left:80%; top:0;}
+    100% {left:100%; top:0;}
+}
+
+.outCity{
+    animation-name: cityOut;
+    animation-duration: 1;
+    animation-timing-function: linear;
+    animation-play-state: running;
+    /* Safari 与 Chrome: */
+    -webkit-animation-name: cityOut;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-play-state: running;
+}
+
+@keyframes cityIn
+{
+    0%   {left:100%; top:0;}
+    25%  {left:80%; top:0;}
+    50%  {left:60%; top:0;}
+    75%  {left:40%; top:0;}
+    100% {left:20%; top:0;}
+}
+ 
+@-webkit-keyframes cityIn /* Safari 与 Chrome */
+{
+    0%   {left:100%; top:0;}
+    25%  {left:80%; top:0;}
+    50%  {left:60%; top:0;}
+    75%  {left:40%; top:0;}
+    100% {left:20%; top:0;}
+}
+
+.inCity{
+    animation-name: cityIn;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-play-state: running;
+    /* Safari 与 Chrome: */
+    -webkit-animation-name: cityIn;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-play-state: running;
+}
+
+ul li{
+	list-style: none;
+}
