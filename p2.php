@@ -28,8 +28,10 @@ $signPackage = $jssdk->GetSignPackage();
 	</head>
 	<body onorientationchange="updateOrientation();">
 		<div class="main">
-			<video id="video_1" controls="controls" width="100%" height="100%" preload="auto" poster="images/preImg.jpg" x5-video-player-type="h5" x5-video-player-fullscreen="true" playsinline="true" objectFit="cover" webkit-playsinline="true" x-webkit-airplay="allow">
-				<source src="http://img.xiyoumai.com/audiyanshi2.mp4" type="video/mp4">
+	<video id="video_1" width="100%" height="100%" preload="auto" x5-video-player-type="h5" x5-video-player-fullscreen="true" x5-video-orientation="portraint" webkit-playsinline="true" x-webkit-airplay="allow" controls="">
+            		<source src="http://img.xiyoumai.com/WeChatSight565.mp4" type="video/mp4">
+            	</video>		
+		
 			</video>
 		</div>
 	</body>
@@ -37,9 +39,6 @@ $signPackage = $jssdk->GetSignPackage();
 		$(function(){
 			var height=$(window).height();	//320
 			var width=$(window).width();	//568
-			$("#video_1").css("width",height);
-			$("#video_1").css("height",width);
-			$("#video_1").addClass("rotate90");
 			var top=$("#video_1").offset().top;
 			var left=$("#video_1").offset().left;
 			$("#video_1").css("top",-top+"px");

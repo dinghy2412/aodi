@@ -817,6 +817,11 @@ control positioning and full window mode. **
      The majority of player components will not be text blocks.
      Text areas will need to turn user selection back on. */
 
+  /* user-select */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 /* Playback technology elements expand to the width/height of the containing div
     <video> or <object> */

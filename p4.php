@@ -23,7 +23,7 @@ $signPackage = $jssdk->GetSignPackage();
 		<title>GOOOO AHEAD</title>
 	</head>
 	<body>
-		<form method="POST" id="Label_Form" onsubmit="return false;" name="Label_Form" style="height: 100%;">
+		<form method="POST" id="Label_Form" name="Label_Form" style="height: 100%;">
 		<div class="leaveInfoBg">
 			<!--<div class="jiathis_style_m"></div>-->
 			<div class="headImg"></div>
@@ -39,7 +39,7 @@ $signPackage = $jssdk->GetSignPackage();
 				<p class="cityInfo"><span id="citySpan">所在城市：</span><span id="cityVal" name="cityVal"></span><span class="changeCity" style="float: right;">切换城市</span></p>
 				<img class="line" src="images/line.png" />
 				<div class="btnDiv">
-					<button id="submitBtn">点击提交</button>
+					<button id="submitBtn" type="button">点击提交</button>
 				</div>
 			</div>
 		</div>
@@ -308,10 +308,47 @@ $signPackage = $jssdk->GetSignPackage();
 				return false;
 			}
 			
-			$("#Label_Form").submit(function(){
-				remindSuccess();
-				return false;
-			});
+			$.ajax({
+				type: "POST",//方法类型
+				url: "/collect.php",//url
+				dataType: "json",//预期服务器返回的数据类型
+				data: $('#Label_Form').serialize(),
+				success: function (result) {
+                    //console.log(result);//打印服务端返回的数据(调试用)
+                    if (result.code == 1) {
+                        remindSuccess();
+                    }
+                    else
+                    {
+                    	remindError(result.message);
+                    }
+                },
+                error : function(jqXHR, textStatus, errorThrown) {
+                	//remindSuccess();
+                    alert("异常！");
+                    /*
+                    alert(jqXHR.responseText);
+                    if(jqXHR.responseText == "Ok")
+                    {
+                    	alert("OK111");
+                    	remindSuccess();
+                    }
+                    else
+                    {
+                    	alert("22222");
+                    	remindError("异常！");
+                    }
+                    //*/
+                    /*
+                    alert(jqXHR.responseText);
+		            alert(jqXHR.status);
+		            alert(jqXHR.readyState);
+		            alert(jqXHR.statusText);
+		            /*弹出其他两个参数的信息*/
+		            //alert(textStatus);
+		            //alert(errorThrown);
+                }
+            });
 		});
 		
 		$(".leaveInfoBg").click(function(){
@@ -355,13 +392,12 @@ $signPackage = $jssdk->GetSignPackage();
 		});
 		
 		$(".num_name").click(function(){
-			$("#cityVal").text($(this).text())
+			$("#cityVal").text($(this).text());
+			$("#cityNm").val($(this).text());
 			//$(".cityContainer").addClass("outCity").removeClass("inCity");
 			$(".cityContainer").css("display","none");
 			
 		})
-		
-	
 </script>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 <script>

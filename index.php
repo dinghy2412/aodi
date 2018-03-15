@@ -24,10 +24,10 @@ $signPackage = $jssdk->GetSignPackage();
 			<div id="progressNum"></div>
 		</div>-->
 		<div class="main">
-			<div class="videoArea">
-				<img src="images/preImg.jpg" class="indexBgImg"/>
-				<div class="vedioImgBtn" id="playBtn">
-<video style="object-fit: fill;" id="indexVideo" width="100%" height="100%" preload="auto" poster="images/preImg.png" x5-video-player-type="h5" x5-video-player-fullscreen="true" playsinline="true" webkit-playsinline="true" x-webkit-airplay="allow">
+			<div class="videoArea" style="background:#000">
+<div class="vedioImgBtn" style="font-size:0" id="playBtn">
+<img style="width: 50px; height: 50px; position: absolute; left: 50%; top: 50%; margin: -25px 0 0 -25px" src="images/videoPlay.png" alt="">
+<video style="object-fit: fill;display:block" id="indexVideo" width="100%" height="100%" preload="auto" poster="images/preImg.jpg" x5-video-player-type="h5" x5-video-player-fullscreen="true" playsinline="true" webkit-playsinline="true" x-webkit-airplay="allow">
 						<source src="http://img.xiyoumai.com/audiyanshi2.mp4" type="video/mp4">
 					</video>
 				</div>
@@ -46,7 +46,12 @@ $signPackage = $jssdk->GetSignPackage();
 		$(".main").click(function(){
 			window.location.href="p2.php";
 		});
-		
+	
+		$("#indexVideo").on("ended",function () {
+			window.location.href="p3.php";
+			window.screen.unlockOrientation();//解除屏幕旋转锁定  
+		});
+	
 		var progressId = "ProgressBarID";
 		function setProgressBar(progress) {
 			if(progress) {
@@ -113,8 +118,8 @@ wx.error(function (res) {
 
 var wxshare = function () {
 	var params = {
-		title: 'GOOOO AHEAD', // 分享标题
-		desc: '奥迪龙抬头', // 分享描述
+		title: '龙抬头，宜开走', // 分享标题
+		desc: '#GOOOO AHEAD#', // 分享描述
 		link: 'http://audi.xiyoumai.com/index.php', // 分享链接
 		imgUrl: 'http://audi.xiyoumai.com/images/shareIcon.png', // 分享图标
 		type: 'link', // 分享类型,music、video或link，不填默认为link
