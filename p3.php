@@ -2,6 +2,7 @@
 require_once "jssdk.php";
 $jssdk = new JSSDK("wx6a7c132cec408d9a", "40ade5090ac5b816cc238a2544f69a13");
 $signPackage = $jssdk->GetSignPackage();
+$id=$_GET['id'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,7 +21,7 @@ $signPackage = $jssdk->GetSignPackage();
 		<!--引入zepto.js-->
 		<script src="http://cdn.bootcss.com/zepto/1.1.4/zepto.js"></script>
 		<!--引入pageSlider.js文件-->
-		<script src="js/pageSlider.js"></script>
+		<script src="js/pageSlider.js?id=<?php echo $id;?>"></script>
 		<title>GOOOO AHEAD</title>
 	</head>
 	<body>
@@ -89,8 +90,8 @@ wx.error(function (res) {
 
 var wxshare = function () {
 	var params = {
-		title: 'GOOOO AHEAD', // 分享标题
-		desc: '奥迪龙抬头', // 分享描述
+		title: '龙抬头，宜开走', // 分享标题
+		desc: '#GOOOO AHEAD#', // 分享描述
 		link: 'http://audi.xiyoumai.com/index.php', // 分享链接
 		imgUrl: 'http://audi.xiyoumai.com/images/shareIcon.png', // 分享图标
 		type: 'link', // 分享类型,music、video或link，不填默认为link
