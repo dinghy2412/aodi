@@ -184,7 +184,11 @@
 				that.timer = null;
 			}, that.opt.duration + 5);
 			if(that.index==9){
-				window.location.href="p4.php"
+				if(location.search.slice(4) !=''){
+					window.location.href="_p4.php?id="+location.search.slice(4);
+				}else{
+					window.location.href="p4.php";
+				}
 			}
 		}
 		event.preventDefault();
