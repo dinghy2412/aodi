@@ -27,7 +27,7 @@ $signPackage = $jssdk->GetSignPackage();
 			<div class="videoArea" style="background:#000">
 <div class="vedioImgBtn" style="font-size:0" id="playBtn">
 <img style="width: 50px; height: 50px; position: absolute; left: 50%; top: 50%; margin: -25px 0 0 -25px" src="images/videoPlay.png" alt="">
-<video style="object-fit: fill;display:block" id="indexVideo" width="100%" height="100%" preload="auto" poster="images/preImg.jpg" x5-video-player-type="h5" x5-video-player-fullscreen="true" playsinline="true" webkit-playsinline="true" x-webkit-airplay="allow">
+<video loop="loop" style="object-fit: fill;display:block" id="indexVideo" width="100%" height="100%" preload="auto" poster="images/preImg.jpg" x5-video-player-type="h5" x5-video-player-fullscreen="true" playsinline="true" webkit-playsinline="true" x-webkit-airplay="allow">
 						<source src="http://img.xiyoumai.com/audiyanshi2.mp4" type="video/mp4">
 					</video>
 				</div>
@@ -45,11 +45,6 @@ $signPackage = $jssdk->GetSignPackage();
 		})*/ 
 		$(".main").click(function(){
 			window.location.href="p2.php";
-		});
-	
-		$("#indexVideo").on("ended",function () {
-			window.location.href="p3.php";
-			window.screen.unlockOrientation();//解除屏幕旋转锁定  
 		});
 	
 		var progressId = "ProgressBarID";
